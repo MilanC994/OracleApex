@@ -1,0 +1,92 @@
+CREATE OR REPLACE TRIGGER AUTOR_TR
+              BEFORE INSERT ON AUTOR
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT AUTOR_SEK.NEXTVAL 
+                    INTO :NEW.ID_AUTORA
+                    FROM DUAL;
+              END;
+/
+CREATE OR REPLACE TRIGGER ZANR_TR
+              BEFORE INSERT ON ZANR
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT ZANR_SEK.NEXTVAL 
+                    INTO :NEW.ID_ZANRA
+                    FROM DUAL;
+              END;
+/
+CREATE OR REPLACE TRIGGER IZDAVAC_TR
+              BEFORE INSERT ON IZDAVAC
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT IZDAVAC_SEK.NEXTVAL 
+                    INTO :NEW.ID_IZDAVACA
+                    FROM DUAL;
+              END;
+/
+CREATE OR REPLACE TRIGGER KNJIGA_TR
+              BEFORE INSERT ON KNJIGA
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT KNJIGA_SEK.NEXTVAL 
+                    INTO :NEW.ID_KNJIGE
+                    FROM DUAL;
+              END;
+/
+CREATE OR REPLACE TRIGGER IZDANJA_TR
+              BEFORE INSERT ON IZDANJE_KNJIGE
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT IZDANJA_SEK.NEXTVAL 
+                    INTO :NEW.ISBN
+                    FROM DUAL;
+              END;
+/
+
+CREATE OR REPLACE TRIGGER ZAPOSLENI_TR
+              BEFORE INSERT ON ZAPOSLENI
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT ZAPOSLENI_SEK.NEXTVAL 
+                    INTO :NEW.ID_ZAPOSLENOG
+                    FROM DUAL;
+              END;
+/
+
+CREATE OR REPLACE TRIGGER REZERVACIJA_TR
+              BEFORE INSERT ON REZERVACIJA
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT REZERVACIJA_SEK.NEXTVAL 
+                    INTO :NEW.ID_REZERVACIJE
+                    FROM DUAL;
+              END;
+/
+CREATE OR REPLACE TRIGGER IZNAJMLJIVANJE_KNJIGE_TR
+              BEFORE INSERT ON IZNAJMLJIVANJE_KNJIGE
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT IZNAJMLJIVANJE_KNJIGE_SEK.NEXTVAL 
+                    INTO :NEW.ID_IZNAJMLJIVANJA
+                    FROM DUAL;
+              END;
+/
+CREATE OR REPLACE TRIGGER TLOGIN_TR
+              BEFORE INSERT ON TLOGIN
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT TLOGIN_SEK.NEXTVAL 
+                    INTO :NEW.ID_CLANA
+                    FROM DUAL;
+              END;
+/
+CREATE OR REPLACE TRIGGER JEZIK_TR
+              BEFORE INSERT ON JEZIK
+              FOR EACH ROW
+              BEGIN                 
+                    SELECT JEZIK_SEK.NEXTVAL 
+                    INTO :NEW.ID_JEZIKA
+                    FROM DUAL;
+              END;
+/
